@@ -4,11 +4,14 @@
 
 **Building Temporal & Network-Native AI Ecosystems**
 
+[![Itch.io](https://img.shields.io/badge/Itch.io-peacebinflow-FA5C5C?style=for-the-badge&logo=itch.io&logoColor=white)](https://peacebinflow.itch.io/)
+[![Substack](https://img.shields.io/badge/Substack-binflow-FF6719?style=for-the-badge&logo=substack&logoColor=white)](https://substack.com/@binflow?utm_source=user-menu)
+[![Substack](https://img.shields.io/badge/Substack-peacebinflowai-FF6719?style=for-the-badge&logo=substack&logoColor=white)](https://peacebinflowai.substack.com/)
+[![HackerNoon](https://img.shields.io/badge/HackerNoon-peacebinflow-black?style=for-the-badge&logo=hackernoon&logoColor=white)](https://hackernoon.com/u/peacebinflow)
 [![Website](https://img.shields.io/badge/Website-Live-brightgreen?style=for-the-badge)](https://peacebinflow.github.io/sageworks-ai)
 [![GitHub](https://img.shields.io/badge/GitHub-PEACEBINFLOW-blue?style=for-the-badge&logo=github)](https://github.com/PEACEBINFLOW)
 [![DEV](https://img.shields.io/badge/DEV-peacebinflow-black?style=for-the-badge&logo=dev.to)](https://dev.to/peacebinflow)
 [![Kaggle](https://img.shields.io/badge/Kaggle-peacebinflow-20BEFF?style=for-the-badge&logo=kaggle)](https://www.kaggle.com/peacebinflow)
-[![itch.io](https://peacebinflow.itch.io/)
 
 **🔗 Live Site:** [https://peacebinflow.github.io/sageworks-ai](https://peacebinflow.github.io/sageworks-ai)
 
