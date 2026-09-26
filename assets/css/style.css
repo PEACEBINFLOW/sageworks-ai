@@ -1,20 +1,23 @@
 :root {
   --bg: #000000;
-  --bg-soft: #0a0a0f;
-  --bg-card: #0f0f18;
+  --bg-soft: #0a0908;
+  --bg-card: #121110;
   --fg: #ffffff;
-  --muted: #a0a0b8;
-  --accent: #ff6b35;
-  --accent-blue: #00d4ff;
-  --accent-purple: #b084ff;
-  --accent-green: #00ff88;
-  --border: #1a1a28;
+  --muted: #a89f92;
+  --border: #241d16;
+
+  /* solar orange scale — black + orange only, from lightest to near-black */
+  --accent-lighter: #ffd9b3;   /* palest shade — research */
+  --accent-light:   #ffb066;   /* light shade */
+  --accent:         #ff6b35;  /* base solar orange — practical */
+  --accent-dark:    #cc4a1a;  /* deep shade — experimental */
+  --accent-darker:  #7a2c0d;  /* near-black orange */
   --glow: rgba(255, 107, 53, 0.15);
 
-  /* content-level accents — reuse the existing brand colors, don't invent new ones */
-  --level-research: var(--accent-blue);
-  --level-practical: var(--accent-green);
-  --level-experimental: var(--accent-purple);
+  /* content-level accents — shades of the same solar orange, no other hues */
+  --level-research: var(--accent-lighter);
+  --level-practical: var(--accent);
+  --level-experimental: var(--accent-dark);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -33,8 +36,8 @@ body {
   inset: 0;
   z-index: -1;
   background: radial-gradient(circle at 20% 50%, rgba(255, 107, 53, 0.08), transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.08), transparent 50%),
-              radial-gradient(circle at 40% 80%, rgba(176, 132, 255, 0.08), transparent 50%);
+              radial-gradient(circle at 80% 20%, rgba(204, 74, 26, 0.08), transparent 50%),
+              radial-gradient(circle at 40% 80%, rgba(255, 176, 102, 0.06), transparent 50%);
 }
 
 .noise {
@@ -81,7 +84,7 @@ header {
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-purple));
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,6 +92,8 @@ header {
   box-shadow: 0 0 30px var(--glow);
   animation: pulse 3s ease-in-out infinite;
 }
+
+.brand-icon .icon-svg { width: 24px; height: 24px; color: #ffffff; }
 
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
@@ -99,7 +104,7 @@ header {
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #ffffff, #a0a0b8);
+  background: linear-gradient(135deg, #ffffff, #a89f92);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -131,7 +136,7 @@ header {
 }
 
 .nav-link-cta {
-  background: linear-gradient(135deg, var(--accent), var(--accent-purple));
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
   color: white;
   font-weight: 600;
 }
@@ -164,10 +169,10 @@ main {
   gap: 0.5rem;
   padding: 0.5rem 1rem;
   border-radius: 50px;
-  background: rgba(0, 212, 255, 0.1);
-  border: 1px solid rgba(0, 212, 255, 0.3);
+  background: rgba(255, 107, 53, 0.1);
+  border: 1px solid rgba(255, 107, 53, 0.3);
   font-size: 0.85rem;
-  color: var(--accent-blue);
+  color: var(--accent-light);
   margin-bottom: 2rem;
   animation: fadeInUp 0.6s ease 0.2s both;
 }
@@ -181,7 +186,7 @@ main {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--accent-green);
+  background: var(--accent);
   animation: blink 2s ease infinite;
 }
 
@@ -200,7 +205,7 @@ main {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--accent), var(--accent-blue), var(--accent-purple), var(--accent-green));
+  background: linear-gradient(135deg, var(--accent-lighter), var(--accent), var(--accent-dark), var(--accent-darker));
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -275,7 +280,7 @@ main {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent), var(--accent-purple));
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
   color: white;
   box-shadow: 0 8px 24px var(--glow);
 }
@@ -308,7 +313,7 @@ main {
 
 .visual-placeholder {
   aspect-ratio: 1;
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(0, 212, 255, 0.1));
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(122, 44, 13, 0.1));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -332,7 +337,10 @@ main {
 .visual-content {
   position: relative;
   z-index: 1;
+  color: var(--accent-light);
 }
+
+.visual-content .icon-svg { width: 1em; height: 1em; }
 
 /* Section styles */
 .section {
@@ -407,7 +415,7 @@ main {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--accent), var(--accent-purple));
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -427,6 +435,9 @@ main {
   margin-bottom: 1rem;
   position: relative;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 .card p {
@@ -448,7 +459,7 @@ main {
 }
 
 .link-list a {
-  color: var(--accent-blue);
+  color: var(--accent-light);
   text-decoration: none;
   transition: all 0.2s ease;
   display: inline-flex;
@@ -477,6 +488,15 @@ main {
 .project-card.level-research { border-left-color: var(--level-research); }
 .project-card.level-practical { border-left-color: var(--level-practical); }
 .project-card.level-experimental { border-left-color: var(--level-experimental); }
+
+/* AngleCore duality tilt (see anglecore-core.js) */
+.project-card[data-anglecore] {
+  transition: transform 0.15s ease, border-left-color 0.3s ease;
+  will-change: transform;
+}
+.project-card[data-anglecore]:hover {
+  border-left-color: var(--accent-lighter);
+}
 
 .card-top {
   display: flex;
@@ -508,9 +528,9 @@ main {
   white-space: nowrap;
   font-weight: 600;
 }
-.badge-research { background: rgba(0, 212, 255, 0.12); color: var(--level-research); }
-.badge-practical { background: rgba(0, 255, 136, 0.12); color: var(--level-practical); }
-.badge-experimental { background: rgba(176, 132, 255, 0.12); color: var(--level-experimental); }
+.badge-research { background: rgba(255, 217, 179, 0.12); color: var(--level-research); }
+.badge-practical { background: rgba(255, 107, 53, 0.12); color: var(--level-practical); }
+.badge-experimental { background: rgba(204, 74, 26, 0.16); color: var(--level-experimental); }
 
 .gaming-badge {
   font-size: 0.7rem;
@@ -520,7 +540,7 @@ main {
   border-radius: 50px;
   white-space: nowrap;
   font-weight: 600;
-  background: linear-gradient(135deg, var(--accent), var(--accent-purple));
+  background: linear-gradient(135deg, var(--accent), var(--accent-darker));
   color: #ffffff;
 }
 
@@ -578,7 +598,7 @@ main {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-purple));
+  background: linear-gradient(135deg, var(--accent), var(--accent-darker));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -596,14 +616,31 @@ main {
 }
 
 .contact-links a {
-  color: var(--accent-blue);
+  color: var(--accent-light);
   text-decoration: none;
   transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .contact-links a:hover {
   color: var(--accent);
   transform: translateX(4px);
+}
+
+/* Icon system (assets/js/anglecore/svg-icons.js) */
+.icon { display: inline-flex; }
+.icon-svg {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: -0.15em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* Footer */
