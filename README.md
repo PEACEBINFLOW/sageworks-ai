@@ -12,8 +12,10 @@
 [![GitHub](https://img.shields.io/badge/GitHub-PEACEBINFLOW-blue?style=for-the-badge&logo=github)](https://github.com/PEACEBINFLOW)
 [![DEV](https://img.shields.io/badge/DEV-peacebinflow-black?style=for-the-badge&logo=dev.to)](https://dev.to/peacebinflow)
 [![Kaggle](https://img.shields.io/badge/Kaggle-peacebinflow-20BEFF?style=for-the-badge&logo=kaggle)](https://www.kaggle.com/peacebinflow)
+[![F6S](https://img.shields.io/badge/F6S-sageworks--ai-FF6B35?style=for-the-badge)](https://www.f6s.com/sageworks-ai)
 
 **🔗 Live Site:** [https://peacebinflow.github.io/sageworks-ai](https://peacebinflow.github.io/sageworks-ai)
+**🏢 Company Profile:** [f6s.com/sageworks-ai](https://www.f6s.com/sageworks-ai)
 
 </div>
 
@@ -110,6 +112,16 @@ Front-end experiments for agentic, dimensional interfaces that extend beyond tra
 **Key Repos:**
 - [`dimensional-ui-hypercube-uno`](https://github.com/PEACEBINFLOW/dimensional-ui-hypercube-uno)
 
+#### ∠ AngleCore Engines
+*Interior/exterior angle duality as the interface itself*
+
+Two builds under the AngleCore name, both driven by the same core tension — what a space or interface **feels like** from the inside versus how it **reads** from the outside:
+
+- **AngleCore Dungeon Engine** — split-view non-euclidean dungeon renderer. The 2D field shows exterior-angle ray vectors and node distortion type; the 3D panel shows the interior-angle-driven room feel (acute rooms expand, obtuse rooms compress/fold), with a chaos mode pushing acute rooms into impossible interior volumes.
+- **AngleCore Focus Interface Engine** — a dynamic UI where every node holds five precomputed states (idle, nearby, hover, focused, far) simultaneously, and cursor proximity continuously interpolates between them instead of firing discrete hover events. Nothing loads; the field reveals structures that already existed at frame 0.
+
+Both feed the same icon/branding layer used on this site — see **AngleCore SVG System** below.
+
 ---
 
 ### 🔗 **G2N Layers**
@@ -125,6 +137,25 @@ Multi-surface cognition layers connecting Google Workspace, device events, and n
 
 **Key Repos:**
 - G2N notebooks available on [Kaggle](https://www.kaggle.com/peacebinflow)
+
+---
+
+## 🎨 Design System
+
+### **AngleCore SVG System**
+The site's icons are no longer emoji — every icon (`brand`, `mission`, `contact`, footer) is a geometric, angle/line-based SVG defined in `assets/js/anglecore/svg-icons.js` and mounted at load via `data-icon="<name>"` attributes. The visual language (open angles, polygon nodes) mirrors the interior/exterior duality the AngleCore engines are built on. `assets/js/anglecore/anglecore-core.js` adds a subtle duality hover-tilt to any card tagged `data-anglecore` (AngleCore Business OS, HF Space, Dungeon Engine, Focus Interface Engine).
+
+### **Solar Palette**
+Colors are black + orange only, expressed as a shade scale rather than separate hues:
+
+| Token | Hex | Use |
+|---|---|---|
+| `--accent-lighter` | `#ffd9b3` | Research level accent, lightest highlights |
+| `--accent-light` | `#ffb066` | Links, secondary stat numbers |
+| `--accent` | `#ff6b35` | Base solar orange, Practical level accent |
+| `--accent-dark` | `#cc4a1a` | Experimental level accent |
+| `--accent-darker` | `#7a2c0d` | Near-black orange, gradients/shadows |
+| `--bg` / `--bg-soft` / `--bg-card` | near-black scale | Background layers |
 
 ---
 
@@ -146,189 +177,3 @@ Multi-surface cognition layers connecting Google Workspace, device events, and n
 ---
 
 ## 🗂️ Repository Structure
-
-```
-sageworks-ai/
-├── index.html          # Main website
-├── styles.css          # Enhanced stylesheet
-├── assets/
-│   ├── img/           # Visual assets
-│   └── docs/          # Documentation
-├── README.md          # This file
-└── LICENSE            # Project license
-```
-
----
-
-## 🚀 Getting Started
-
-### Local Development
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/PEACEBINFLOW/sageworks-ai.git
-   cd sageworks-ai
-   ```
-
-2. **Open in browser:**
-   ```bash
-   # Using Python
-   python -m http.server 8000
-   
-   # Using Node.js
-   npx serve
-   
-   # Or simply open index.html in your browser
-   ```
-
-3. **Visit:** `http://localhost:8000`
-
-### Deployment
-
-The site is automatically deployed via **GitHub Pages**:
-- **Branch:** `main`
-- **Directory:** `/` (root)
-- **URL:** https://peacebinflow.github.io/sageworks-ai
-
-**To deploy changes:**
-```bash
-git add .
-git commit -m "Update: description"
-git push origin main
-# GitHub Pages automatically rebuilds
-```
-
----
-
-## 📚 Documentation & Resources
-
-### **Official Documentation**
-- 📝 [DEV Community Articles](https://dev.to/peacebinflow) — 30+ in-depth posts
-- 🔬 [Kaggle Notebooks](https://www.kaggle.com/peacebinflow) — Live experiments
-- 💻 [GitHub Repositories](https://github.com/PEACEBINFLOW) — 40+ repos
-- 🌐 [Forem Profile](https://forem.com/peacebinflow) — Community posts
-
-### **Key Article Series**
-1. **LAW-N Network Series** (Parts 1-5)
-2. **Google AI Agents Intensive** (5-day journey)
-3. **MindsEye Architecture** (Building Web4)
-4. **LAW-T Programming Language** (Time-native coding)
-
-### **External Recognition**
-- Featured in LibHunt developer tools
-- Used in production AI farming assistant (Kisan by Yashwanth Krishna Pavush)
-- Active participant in Hacktoberfest 2025
-- Google AI Challenge contributor
-
----
-
-## 🤝 Contributing
-
-While this is primarily a personal project by Peace Thabiwa, contributions and collaboration are welcome:
-
-1. **Fork the repository**
-2. **Create a feature branch:** `git checkout -b feature/amazing-feature`
-3. **Commit your changes:** `git commit -m 'Add amazing feature'`
-4. **Push to branch:** `git push origin feature/amazing-feature`
-5. **Open a Pull Request**
-
-### Contribution Guidelines
-- Maintain the existing design language
-- Ensure responsive design principles
-- Test across multiple browsers
-- Document any new features
-
----
-
-## 🌍 Community & Ecosystem
-
-### **Active Platforms**
-- **GitHub:** Primary development hub
-- **DEV Community:** Long-form technical writing
-- **Kaggle:** Experimental notebooks and datasets
-- **Forem:** Community engagement
-
-### **Related Projects**
-All 40+ repositories are part of the SageWorks AI ecosystem:
-- **MindsEye family:** 20+ repos
-- **LAW Network family:** 10+ repos
-- **LAW-T language:** 5+ repos
-- **Dimensional UI:** Experimental UI repos
-
-👉 **Explore the full ecosystem:** [github.com/PEACEBINFLOW](https://github.com/PEACEBINFLOW)
-
----
-
-## 📬 Contact & Collaboration
-
-### **Creator: Peace Thabiwa**
-*Founder, SageWorks AI · Based in Maun, Botswana*
-
-For collaboration, research proposals, or ecosystem questions:
-
-- 📧 **Email:** peacethabibinflow@proton.me
-- 💻 **GitHub:** [@PEACEBINFLOW](https://github.com/PEACEBINFLOW)
-- 📝 **DEV Community:** [@peacebinflow](https://dev.to/peacebinflow)
-- 📊 **Kaggle:** [@peacebinflow](https://www.kaggle.com/peacebinflow)
-- 🌐 **Forem:** [@peacebinflow](https://forem.com/peacebinflow)
-
-### **Collaboration Opportunities**
-- Research partnerships in temporal computing
-- Open-source contributions to the ecosystem
-- Integration with your AI/ML projects
-- Speaking engagements and technical writing
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-## 🙏 Acknowledgments
-
-### **Technologies & Services**
-- **GitHub Pages** — Hosting infrastructure
-- **TigerData/Timescale** — Temporal database backend
-- **Google Gemini** — AI orchestration
-- **Kaggle** — Experimental platform
-- **DEV Community** — Publishing platform
-
-### **Community**
-Special thanks to everyone who has engaged with, used, or contributed to the SageWorks AI ecosystem. Your feedback and adoption drive innovation forward.
-
----
-
-## 🔮 Future Roadmap
-
-### **2025 Q1-Q2**
-- [ ] LAW-T interpreter v1.0 release
-- [ ] MindsEye mobile apps (iOS/Android)
-- [ ] Network SQL production deployment
-- [ ] Expanded Kaggle dataset library
-
-### **2025 Q3-Q4**
-- [ ] Web4 specification whitepaper
-- [ ] LAW-N reference implementation
-- [ ] Enterprise pilot programs
-- [ ] Developer documentation hub
-
-### **Long-term Vision**
-Building toward a future where:
-- **Data flows as time-labeled temporal units**
-- **Networks operate under transparent laws**
-- **Agents possess genuine memory architecture**
-- **Computation is measured in perception, not just cycles**
-
----
-
-<div align="center">
-
-**Built with 🧠 by Peace Thabiwa in Maun, Botswana**
-
-*"Perception redefined through systems."*
-
-[![Star this repo](https://img.shields.io/github/stars/PEACEBINFLOW/sageworks-ai?style=social)](https://github.com/PEACEBINFLOW/sageworks-ai)
-
-</div>
