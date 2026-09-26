@@ -8,6 +8,7 @@
 [![GitHub](https://img.shields.io/badge/GitHub-PEACEBINFLOW-blue?style=for-the-badge&logo=github)](https://github.com/PEACEBINFLOW)
 [![DEV](https://img.shields.io/badge/DEV-peacebinflow-black?style=for-the-badge&logo=dev.to)](https://dev.to/peacebinflow)
 [![Kaggle](https://img.shields.io/badge/Kaggle-peacebinflow-20BEFF?style=for-the-badge&logo=kaggle)](https://www.kaggle.com/peacebinflow)
+[![itch.io](https://peacebinflow.itch.io/)
 
 **🔗 Live Site:** [https://peacebinflow.github.io/sageworks-ai](https://peacebinflow.github.io/sageworks-ai)
 
